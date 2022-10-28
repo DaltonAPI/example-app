@@ -1,48 +1,44 @@
-<link rel="stylesheet" href="post-box.css" type="text/css">
-
-
-<div class="widget-post mb-5" aria-labelledby="post-header-title">
-    <div class="widget-post__header">
-        <h2 class="widget-post__title" id="post-header-title">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-            write post
-        </h2>
-    </div>
-    <form id="widget-form" class="widget-post__form" name="form" aria-label="post widget">
-        <div class="widget-post__content">
-            <label for="post-content" class="sr-only">share your moments</label>
-            <textarea name="post" id="post-content" class="widget-post__textarea scroller" placeholder="share your moments"></textarea>
-        </div>
-        <div class="widget-post__options" id="stock-options">
-            <label for="search" class="sr-only">Select Symbol</label>
-            <input type="search" placeholder="Select Symbol" class=" widget-post___input widget-post--search search--stock" id="search">
-            <label for="search" class="sr-only">Select Symbol</label>
-            <input type="search" placeholder="Select Symbol" class=" widget-post___input widget-post--search search--stock" id="search">
-            <label for="search" class="sr-only">Select Symbol</label>
-            <input type="search" placeholder="Select Symbol" class=" widget-post___input widget-post--search search--stock" id="search">
 
 
 
 
-        </div>
-        <div class="widget-post__actions post--actions">
-            <div class="post-actions__attachments">
-{{--                <button type="button" class="btn post-actions__stock attachments--btn" aria-controls="stock-options" aria-haspopup="true">--}}
-{{--                    <i class="fa fa-usd" aria-hidden="true"></i>--}}
-{{--                    stock--}}
-{{--                </button>--}}
-                <button type="button" class="btn post-actions__upload attachments--btn">
-                    <label for="upload-image" class="post-actions__label">
-                        <i class="fa fa-upload" aria-hidden="true"></i>
-                        upload image
-                    </label>
-                </button>
-                <input type="file" id="upload-image" accept="image/*" multiple>
+
+
+
+            <div class="mb-5 w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
+                <form method="POST" action="#">
+                    <!-- Title -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700" for="title">
+                            Title
+                        </label>
+
+                        <input
+                            class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                            type="text" name="email" placeholder="180" value="Create Laravel project" />
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mt-4">
+                        <label class="block text-sm font-bold text-gray-700" for="password">
+                            Description
+                        </label>
+                        <textarea name="description"
+                                  class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                  rows="4" placeholder="400">lorem ipsum dolor sit amet, consectet</textarea>
+                    </div>
+
+                    <div class="flex items-center justify-start mt-4 gap-x-2">
+                        <button type="submit"
+                                class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-sky-500 hover:bg-sky-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
+                            Update
+                        </button>
+                        <button type="submit"
+                                class="px-6 py-2 text-sm font-semibold text-gray-100 bg-gray-400 rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="post-actions__widget">
-                <button class="btn post-actions__publish">publish</button>
-            </div>
-        </div>
-    </form>
-</div>
-<script src="post-box.js"></script>
+
+
