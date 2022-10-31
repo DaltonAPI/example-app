@@ -38,7 +38,7 @@
 
 
                         <select class="form-select mt-3" aria-label="Default select example" name="category_id">
-                            @foreach(\App\models\Category::all() as $category  )
+                            @foreach($categories as $category  )
                                 <option selected value="{{$category->id}}"
                                     {{ old('category_id') == $category->id ? 'selected' : '' }}
                                 >{{ ucwords($category->name)}}</option>
