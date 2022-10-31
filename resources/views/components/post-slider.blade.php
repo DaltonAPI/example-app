@@ -3,16 +3,14 @@
     <div id="slider">
 
 
-        @foreach ($posts->skip(2)->take(5) as $post)
+        @foreach ($posts->skip(2)->take(2) as $post)
             <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-
-
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
-                    <img src="{{$post->image_url ? asset('storage/' . $post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" class="ls-bg" alt="" />
+                    <img  class="rounded-xl" src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
                 @endif
                 @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                    <video  >
-                        <source src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
+                    <video  controls >
+                        <source  src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                     </video>
                 @endif
 

@@ -14,7 +14,7 @@
                 <img  class="rounded-xl" src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
             @endif
             @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                <video  controls style="min-width: 100%">
+                <video width="350" height="350" controls>
                     <source src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                 </video>
             @endif

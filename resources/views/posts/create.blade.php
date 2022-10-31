@@ -22,7 +22,7 @@
                     <div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>{!! session('message') !!}</div>
                 @endif
                 <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
-                    <form  method="POST" action="{{ url('createPost')}}" enctype="multipart/form-data">
+                    <form  method="POST" action="/createPost" enctype="multipart/form-data">
                         @csrf
                         <!-- Title -->
                         <x-forms.input  name="title" id="title"/>
