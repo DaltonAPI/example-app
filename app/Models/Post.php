@@ -34,7 +34,7 @@ class Post extends Model
 
     }
 
-    protected $fillable = ['title', 'body','category_id' , 'user_id','image_url', 'image_extension'];
+    protected $fillable = ['title', 'body','category_id' , 'user_id','image_url', 'image_extension', 'filename', 'url'];
 
     public function category(){
       return $this->belongsTo(Category::class);

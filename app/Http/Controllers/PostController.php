@@ -50,17 +50,23 @@ class PostController extends Controller
 
 
         if($request->hasFile('image_url')){
-            $image = $request->file('image_url')->store('image_url','public');
+            $image = $request->file('image_url')->store('image_url','s3');
+            Storage::disk('s3')->setVisibility($image,'public');
             $file = $request->file('image_url');
-            $size = Storage::size($image);
+//            $size = Storage::size($image);
             $extension = $file->getClientOriginalExtension();
+            $filename = basename($image);
+            $url = Storage::disk('s3')->url($image);
         }
+
         Post::create([
             'title' => $request->title,
             'slug' => $request->slug,
             'user_id' => Auth::user()->id,
 //            'excerpt' => $request->excerpt,
             'category_id' => $request->category_id,
+            'url' => $url,
+            'filename' => $filename,
             'body' => $request->body,
             'image_url' => $image,
             'image_extension' => $extension,

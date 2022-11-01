@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('image_url')->nullable();
 //            $table->text('excerpt');
             $table->text('body');
+            $table->text('url');
+            $table->text('filename');
             $table->string('image_extension')->nullable();
             $table->timestamps();
             $table->timestamp('published_at')->nullable();

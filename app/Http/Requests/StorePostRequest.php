@@ -30,6 +30,8 @@ class StorePostRequest extends FormRequest
             'body' => 'required',
 //            'slug' => 'required',
             'category_id' => 'required',
+
+
             'image_url' => ['required'],
 
         ];

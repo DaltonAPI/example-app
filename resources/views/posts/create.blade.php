@@ -27,7 +27,7 @@
                         <!-- Title -->
                         <x-forms.input  name="title" id="title"/>
 
- {{--                        <x-forms.input name="slug" />--}}
+  {{--                        <x-forms.input name="slug" />--}}
 
 {{--                        <x-forms.input name="excerpt" />--}}
 
