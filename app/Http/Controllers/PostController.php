@@ -68,7 +68,7 @@ class PostController extends Controller
             'url' => $url,
             'filename' => $filename,
             'body' => $request->body,
-            'image_url' => '',
+            'image_url' => $image,
             'image_extension' => $extension,
         ]);
 
