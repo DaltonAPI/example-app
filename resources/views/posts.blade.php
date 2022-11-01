@@ -3,28 +3,15 @@
 {{--        <x-post-slider :posts="$posts"></x-post-slider>--}}
     <div class="main-slider">
         <div id="slider">
-
-
-
-            @foreach ($posts as $post)
+            @foreach ($posts->skip(3)->take(2) as $post)
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
                 <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-
-
-                        <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
-
-{{--                    @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )--}}
-{{--                        <video  class="img-fluid w-100"  >--}}
-{{--                            <source class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">--}}
-{{--                        </video>--}}
-{{--                    @endif--}}
-
+                    <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
                     <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
                         <a href="/post/?category={{$post->category->slug}}&{{http_build_query(request()->except('category'))}}" class="btn caegory-btn"><b>{{$post->category->slug}}</b></a>
                         <h3 class="title"><b>{{$post->title}}</b></h3>
                         <h6>Published {{$post->created_at->diffForHumans()}}</h6>
                     </div>
-
                 </div>
                 @endif
             @endforeach
@@ -43,7 +30,7 @@
             <div class="row">
 
                 <div class="col-lg-8 col-md-12">
-                    <x-post-box/>
+                    <x-post-box  :categories="$categories"/>
                     <div class="blog-posts">
 
                         @if($posts->count())
