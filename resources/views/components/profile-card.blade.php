@@ -1,6 +1,6 @@
 @auth
     <div class="sidebar-section about-author center-text">
-        <div class="author-image"><img src="{{ Auth::user()->avatar ? asset('storage/' . Auth::user()->avatar) : asset('images/advertise-1-400x500.jpg' ) }}" alt="Autohr Image"></div>
+        <div class="author-image"><img src="{{ Auth::user()->avatar ? asset( Auth::user()->url) : asset('images/advertise-1-400x500.jpg' ) }}" alt="Autohr Image"></div>
 
         <ul class="social-icons">
             <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>

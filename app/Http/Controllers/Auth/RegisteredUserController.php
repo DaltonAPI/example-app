@@ -9,6 +9,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
@@ -45,12 +46,19 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'avatar' => ['required'],
+//            'url' => ['required'],
+//            'filename' => ['required'],
+
         ]);
 
 
 
         if($request->hasFile('avatar')){
-            $image = $request->file('avatar')->store('avatar','public');
+            $image = $request->file('avatar')->store('avatar','s3');
+            Storage::disk('s3')->setVisibility($image,'public');
+            $file = $request->file('avatar');
+            $filename = basename($image);
+            $url = Storage::disk('s3')->url($image);
         }
 
 
@@ -60,6 +68,8 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'bio' => $request->bio,
             'avatar' => $image,
+            'url' => $url,
+            'filename' => $filename,
             'username' => $request->username,
             'password' => Hash::make($request->password),
 
@@ -69,7 +79,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect('/');
     }
 
     /**
