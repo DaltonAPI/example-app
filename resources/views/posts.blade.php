@@ -6,25 +6,27 @@
 
 
 
-            @foreach ($posts as $item)
+            @foreach ($posts as $post)
+                @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
                 <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
 
-                    @if ($item->image_extension === 'png' or $item->image_extension === 'jpg' or $item->image_extension === 'gif' )
-                        <img  class="ls-bg" src="{{ $item->image_url ? asset('storage/' .$item->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
-                    @endif
-{{--                    @if ($item->image_extension === 'mp4' or $item->image_extension === 'mp3' )--}}
-{{--                        <video  class="ls-bg"  controls>--}}
-{{--                            <source src="{{ $item->image_url ? asset('storage/' .$item->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">--}}
+
+                        <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
+
+{{--                    @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )--}}
+{{--                        <video  class="img-fluid w-100"  >--}}
+{{--                            <source class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">--}}
 {{--                        </video>--}}
 {{--                    @endif--}}
 
                     <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-                        <a href="/post/?category={{$item->category->slug}}&{{http_build_query(request()->except('category'))}}" class="btn caegory-btn"><b>{{$item->category->slug}}</b></a>
-                        <h3 class="title"><b>{{$item->title}}</b></h3>
-                        <h6>Published {{$item->created_at->diffForHumans()}}</h6>
+                        <a href="/post/?category={{$post->category->slug}}&{{http_build_query(request()->except('category'))}}" class="btn caegory-btn"><b>{{$post->category->slug}}</b></a>
+                        <h3 class="title"><b>{{$post->title}}</b></h3>
+                        <h6>Published {{$post->created_at->diffForHumans()}}</h6>
                     </div>
 
                 </div>
+                @endif
             @endforeach
 
 

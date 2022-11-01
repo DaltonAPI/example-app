@@ -11,11 +11,11 @@
         </div>
         <div class="image-wrapper">
             @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
-                <img  class="rounded-xl" src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
+                <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
             @endif
             @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                <video width="350" height="350" controls>
-                    <source src="{{ $post->image_url ? asset('storage/' .$post->image_url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
+                <video  class="img-fluid w-100"  >
+                    <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                 </video>
             @endif
         </div>
