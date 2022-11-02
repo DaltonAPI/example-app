@@ -17,7 +17,7 @@
 
                 <div  class="slider-content rounded-xl ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
                     <a href="/post/?category={{$post->category->slug}}&{{http_build_query(request()->except('category'))}}" class="btn caegory-btn"><b>{{$post->category->slug}}</b></a>
-                    <h3 class="title"><b>{{$post->title}}</b></h3>
+                    <h5 class="title"><b>{{$post->title}}</b></h5>
                     <h6>Published {{$post->created_at->diffForHumans()}}</h6>
                 </div>
 
