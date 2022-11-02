@@ -30,7 +30,9 @@
             <div class="row">
 
                 <div class="col-lg-8 col-md-12">
-                    <x-post-box  :categories="$categories"/>
+                   @auth
+                        <x-post-box  :categories="$categories"/>
+                    @endauth
                     <div class="blog-posts">
 
                         @if($posts->count())
@@ -43,7 +45,7 @@
                                     <x-last-card :post="$posts[1]"/>
                                 </div><!-- row -->
                             @endif
-                            <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>
+{{--                            <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>  <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
                         @else
                             <p>No post yet available. Please check back later</p>
                         @endif
@@ -82,15 +84,24 @@
                         </div><!-- sidebar-section latest-post-area -->
 
                        <x-advertisement/>
+                        <section class="footer-instagram-area">
 
-                            <div class="sidebar-section instagram-area">
-                                <h4 class="title"><b class="light-color">User List</b></h4>
-                                <ul class="instagram-img">
-                                    @foreach($users as $user)
-                                        <img class="w-10 h-10 rounded-full mr-4" src="{{ $user->avatar ? asset('storage/' .$user->avatar) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
-                                    @endforeach
-                                </ul>
-                            </div><!-- sidebar-section instagram-area -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h5 class="title"><b class="light-color">User List</b></h5>
+                                    </div><!-- col-lg-4 -->
+                                </div><!-- row -->
+                            </div><!-- container -->
+
+                            <ul class="instagram">
+                                @foreach($users as $user)
+                                    <li><a href="#"><img  class="w-10 h-10 rounded-xl" src="{{ $user->avatar ? asset($user->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Instagram Image"></a></li>
+
+                                @endforeach
+                            </ul>
+                        </section><!-- section -->
+
 
 
 

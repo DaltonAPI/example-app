@@ -36,6 +36,19 @@
                 <div class="blog-posts">
 
                     <div class="single-post">
+
+                        <div class="image-wrapper">
+                            @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
+                                <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
+                            @endif
+                            @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
+                                <video  controls class="img-fluid w-100"  >
+                                    <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
+                                </video>
+                            @endif
+
+                        </div>
+                        <h4 class="title"><a href="#"><b class="light-color">This is post about travel, adventure and fun</b></a></h4>
                         <div class="flex items-center mb-2">
                             <img class="w-10 h-10 rounded-full mr-4" src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png" alt="Avatar of Writer">
                             <div class="text-sm">
@@ -43,18 +56,6 @@
                                 <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
                             </div>
                         </div>
-                        <div class="image-wrapper">
-                            @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
-                                <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
-                            @endif
-                            @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                                <video  class="img-fluid w-100"  >
-                                    <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
-                                </video>
-                            @endif
-
-                        </div>
-
                         <div class="icons">
                             <div class="left-area">
                                <x-category-button  :category="$post->category"/>
@@ -62,7 +63,7 @@
                            <x-actions :post="$post"></x-actions>
                         </div>
 
-{{--                        <h3 class="title"><a href="#"><b class="light-color">This is post about travel, adventure and fun</b></a></h3>--}}
+
                         <p class="desc">{{ $post->body }}</p>
 
                     </div><!-- single-post -->

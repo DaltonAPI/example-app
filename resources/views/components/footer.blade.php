@@ -4,7 +4,7 @@
 
             <div class="col-sm-6">
                 <div class="footer-section">
-                    <p class="copyright">Juli &copy; 2018. All rights reserved | Made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+                    <p class="copyright">chattabox &copy; 2022. All rights reserved | Made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://newsdf.herokuapp.com/" target="_blank">Chattabox</a></p>
                 </div><!-- footer-section -->
             </div><!-- col-lg-4 col-md-6 -->
 

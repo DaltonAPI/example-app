@@ -43,7 +43,7 @@
                             @can('admin')
                                 <li><a href="/posts">DASHBOARD</a></li>
                             @endcan
-                            <li> <form method="POST" action="{{ route('logout') }}">
+                            <li> <form method="POST" action="/logout">
                                     @csrf
                                     <x-dropdown-link :href="route('logout')"
                                                      onclick="event.preventDefault();
