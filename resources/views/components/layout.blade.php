@@ -35,6 +35,18 @@
 
 
 <x-header/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3201106649415125"
+        crossorigin="anonymous"></script>
+<!-- example -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3201106649415125"
+     data-ad-slot="5573537177"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 {{$slot}}
 <x-footer/>
 
