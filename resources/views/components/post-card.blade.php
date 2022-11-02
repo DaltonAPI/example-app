@@ -8,7 +8,7 @@
                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
             @endif
             @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                <video controls    height="20px">
+                <video class="img-fluid w-100"   controls  style="max-height: 200px !important;border-radius: 15px">
                     <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                 </video>
             @endif
