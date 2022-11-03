@@ -50,6 +50,7 @@
                             <p>No post yet available. Please check back later</p>
                         @endif
                     </div><!-- blog-posts -->
+                       {{ $posts->links() }}
                 </div><!-- col-lg-4 -->
                 <div class="col-lg-4 col-md-12">
                     <div class="sidebar-area">
@@ -110,7 +111,7 @@
                 </div><!-- col-lg-4 -->
 
             </div><!-- row -->
-            {{ $posts->links() }}
+
         </div><!-- container -->
     </section><!-- section -->
 {{--    <x-other-post/>--}}

@@ -2,7 +2,7 @@
 
 <div class="col-lg-12 col-md-12">
     <div class="single-post">
-        <div class="flex items-center  mb-2">
+        <div class="flex items-center ">
             <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
             <div class="text-sm">
                 <p class="text-gray-900 leading-none " style="font-weight: bold"><a  href="/?author={{$post->author->username}}">{{$post->author->name}}</a></p>
@@ -14,7 +14,7 @@
                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
             @endif
             @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                <video class="img-fluid w-100"   controls  style="border-radius: 15px">
+                <video class="img-fluid w-100"   controls  style="height: 500px !important;border-radius: 15px">
                     <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                 </video>
             @endif
