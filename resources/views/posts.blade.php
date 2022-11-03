@@ -8,9 +8,9 @@
                 <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
                     <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
                     <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-                        <a href="/post/?category={{$post->category->slug}}&{{http_build_query(request()->except('category'))}}" class="btn caegory-btn"><b>{{$post->category->slug}}</b></a>
-                        <h3 class="title"><b>{{$post->title}}</b></h3>
-                        <h6>Published {{$post->created_at->diffForHumans()}}</h6>
+                        <h5 ><b>{{$post->title}}</b></h5>
+                        <x-category-button  :category="$post->category"/>
+                        <p >Published {{$post->created_at->diffForHumans()}}</p>
                     </div>
                 </div>
                 @endif
