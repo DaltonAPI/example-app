@@ -13,7 +13,7 @@
                 </video>
             @endif
         </div>
-        <h4 class="title"><a href="/posts/{{$post->id}}"><b class="light-color">{{$post->title}}</b></a></h4>
+        <h6 class="title"><a href="/posts/{{$post->id}}"><b class="light-color">{{$post->title}}</b></a></h6>
         <div class="flex items-center ">
             <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
             <div class="text-sm">

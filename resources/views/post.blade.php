@@ -48,7 +48,7 @@
                             @endif
 
                         </div>
-                        <h4 class="title"><a href="#"><b class="light-color">This is post about travel, adventure and fun</b></a></h4>
+                        <h6 class="title"><a href="#"><b class="light-color">This is post about travel, adventure and fun</b></a></h6>
                         <div class="flex items-center mb-2">
                             <img class="w-10 h-10 rounded-full mr-4" src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png" alt="Avatar of Writer">
                             <div class="text-sm">

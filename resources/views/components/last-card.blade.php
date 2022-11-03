@@ -24,7 +24,7 @@
         </div>
 
         <div class="post-details width-50 right-area">
-            <h4 class="title"><a href="/posts/{{$post->id}}"><b class="light-color">{{$post->title}}y</b></a></h4>
+            <h6 class="title"><a href="/posts/{{$post->id}}"><b class="light-color">{{$post->title}}y</b></a></h6>
             <div class="icons">
                 <div class="left-area">
                   <x-category-button  :category="$post->category"/>
