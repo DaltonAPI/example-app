@@ -14,7 +14,7 @@
                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
             @endif
                 @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
-                    <video style="border-radius: 15px" class="img-fluid w-100"  autoplay muted playsinline loop poster="http://placehold.it/350x350">
+                    <video style="border-radius: 15px" class="img-fluid w-100" controls  autoplay muted playsinline loop poster="http://placehold.it/350x350">
                         <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                     </video>
                 @endif
