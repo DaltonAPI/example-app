@@ -34,29 +34,37 @@
 {{--            <li><a href="/contact" class="{{ request()->is('/contact') ? 'text-blue-500' : '' }}">CONTACT</a></li>--}}
             @if (Route::has('login'))
                 @auth
-                    <li class="drop-down">
-                        <a href="#!"  data-toggle="dropdown">
-                            <img class="w-10 h-10 rounded-full mt-4" src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png" alt="Avatar of Writer">
-                        </a>
-
-                        <ul class="drop-down-menu">
-
-                                <li><a href="/posts">DASHBOARD</a></li>
-
-                            <li> <form method="POST" action="/logout">
-                                    @csrf
-                                    <x-dropdown-link :href="route('logout')"
-                                                     onclick="event.preventDefault();
+                    <li> <form method="POST" action="/logout">
+                            @csrf
+                            <x-dropdown-link :href="route('logout')"
+                                             onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                        {{ __('Log Out') }}
-                                    </x-dropdown-link>
-                                </form></li>
-                        </ul>
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form></li>
+{{--                    <li class="drop-down">--}}
+{{--                        <a href="#!"  data-toggle="dropdown">--}}
+{{--                            <img class="w-10 h-10 rounded-full mt-4" src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png" alt="Avatar of Writer">--}}
+{{--                        </a>--}}
 
-                    </li>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-                        <a href="/create">Create post</a>
-                    </button>
+{{--                        <ul class="drop-down-menu">--}}
+
+{{--                                <li><a href="/posts">DASHBOARD</a></li>--}}
+
+{{--                            <li> <form method="POST" action="/logout">--}}
+{{--                                    @csrf--}}
+{{--                                    <x-dropdown-link :href="route('logout')"--}}
+{{--                                                     onclick="event.preventDefault();--}}
+{{--                                                this.closest('form').submit();">--}}
+{{--                                        {{ __('Log Out') }}--}}
+{{--                                    </x-dropdown-link>--}}
+{{--                                </form></li>--}}
+{{--                        </ul>--}}
+
+{{--                    </li>--}}
+{{--                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">--}}
+{{--                        <a href="/create">Create post</a>--}}
+{{--                    </button>--}}
                 @else
                     <li> <a href="{{ route('login') }}" >LOGIN</a></li> |
                     @if (Route::has('register'))
