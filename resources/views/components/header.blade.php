@@ -28,9 +28,9 @@
     <div class="middle-menu center-text"><a href="#" class="logo"><img src="../logo.png" alt="Logo Image"></a></div>
     <div class="bottom-area">
         <div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
-        <ul class="main-menu visible-on-click" id="main-menu">
-            <li><a href="/" class="{{ request()->is('/') ? 'text-blue-500' : '' }}">HOME</a></li>
-            <li><a href="/about" class="{{ request()->is('/about') ? 'text-blue-500' : '' }}">ABOUT</a></li>
+        <ul class="" id="main-menu" style="padding: 15px">
+            <li><a href="/" class="{{ request()->is('/') ? 'text-blue-500' : '' }}">HOME</a></li> |
+            <li><a href="/about" class="{{ request()->is('/about') ? 'text-blue-500' : '' }}">ABOUT</a></li> |
 {{--            <li><a href="/contact" class="{{ request()->is('/contact') ? 'text-blue-500' : '' }}">CONTACT</a></li>--}}
             @if (Route::has('login'))
                 @auth
@@ -40,9 +40,9 @@
                         </a>
 
                         <ul class="drop-down-menu">
-                            @can('admin')
+
                                 <li><a href="/posts">DASHBOARD</a></li>
-                            @endcan
+
                             <li> <form method="POST" action="/logout">
                                     @csrf
                                     <x-dropdown-link :href="route('logout')"
@@ -58,7 +58,7 @@
                         <a href="/create">Create post</a>
                     </button>
                 @else
-                    <li> <a href="{{ route('login') }}" >LOGIN</a></li>
+                    <li> <a href="{{ route('login') }}" >LOGIN</a></li> |
                     @if (Route::has('register'))
                         <li> <a href="{{ route('register') }}" >REGISTER</a></li>
                     @endif
