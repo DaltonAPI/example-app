@@ -10,10 +10,9 @@
 
             </div>
         </div>
+        <h6 class="title"><a href="/posts/{{$post->id}}"><b class="light-color">{{$post->title}}</b></a></h6>
         <div class="image-wrapper">
-
-
-            @if ($post->image_extension !== 'mp4' or $post->image_extension !== 'mp3' )
+            @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' )
                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
             @endif
                 @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
@@ -24,7 +23,7 @@
 
 
         </div>
-        <h6 class="title"><a href="/posts/{{$post->id}}"><b class="light-color">{{$post->title}}</b></a></h6>
+
 
          <div class="icons">
             <div class="left-area">
