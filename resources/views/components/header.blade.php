@@ -27,7 +27,7 @@
     </div><!-- top-menu -->
     <div class="middle-menu center-text"><a href="#" class="logo"><img src="../logo.png" alt="Logo Image"></a></div>
     <div class="bottom-area">
-        <div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+{{--        <div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>--}}
         <ul class="" id="main-menu" style="padding: 15px">
             <li><a href="/" class="{{ request()->is('/') ? 'text-blue-500' : '' }}">HOME</a></li> |
             <li><a href="/about" class="{{ request()->is('/about') ? 'text-blue-500' : '' }}">ABOUT</a></li> |

@@ -41,14 +41,14 @@
                             @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' )
                                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
                             @endif
-                            @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3' )
+                            @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3'  or $post->image_extension === 'mov')
                                 <video style=" border-radius: 15px" class="img-fluid w-100" controls autoplay muted playsinline loop poster="http://placehold.it/350x350">
                                     <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                                 </video>
                             @endif
 
                         </div>
-                        <h6 class="title"><a href="#"><b class="light-color">This is post about travel, adventure and fun</b></a></h6>
+                        <h6 class="title"><a href="#"><b class="light-color">{{$post->title}}</b></a></h6>
                         <div class="flex items-center mb-2">
                             <img class="w-10 h-10 rounded-full mr-4" src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png" alt="Avatar of Writer">
                             <div class="text-sm">
