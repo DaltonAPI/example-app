@@ -47,7 +47,10 @@
 
                 <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
-            <x-forms.textArea name="bio" />
+            <div class="mt-4">
+                <label for="bio">Bio</label>
+                <x-forms.textArea name="bio" />
+            </div>
             <!-- Password -->
             <div class="mt-4">
                 <x-input-label for="password" :value="__('Password')" />
@@ -67,7 +70,9 @@
                                 type="password"
                                 name="password_confirmation" required />
             </div>
-            <x-forms.upload name="avatar" ></x-forms.upload>
+          <div class="mt-4">
+              <x-forms.upload name="avatar" ></x-forms.upload>
+          </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}

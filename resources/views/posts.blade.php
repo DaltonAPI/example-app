@@ -30,8 +30,9 @@
             <div class="row">
 
                 <div class="col-lg-8 col-md-12">
+                    <h1>Local News</h1>
                     <p class="mb-4">
-                        Chattabox is a platform where we get news from the people instead of of the media. This application was created for learning but feel free to to post your content. Please avoid posting graphic content, large files(over 20mb) or misinformation of any kind.
+                        Chattabox is a platform where we get news from the people instead of  the media. This application was created for learning but feel free  to post your content. Please avoid posting graphic content, large files(over 20mb ) or misinformation of any kind.
 
 
                      </p>

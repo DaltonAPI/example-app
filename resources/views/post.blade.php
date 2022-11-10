@@ -64,7 +64,7 @@
                         </div>
 
 
-                        <p class="desc">{{ $post->body }}</p>
+                        <p style="color: #007aff" class="desc"><a href="{{ $post->body }}">Source: {{ $post->body }}</a></p>
 
                     </div><!-- single-post -->
 
