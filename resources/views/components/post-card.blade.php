@@ -2,7 +2,7 @@
 
 
 
-    <div class="col-lg-12 col-md-12 " style="margin-top: -26px;">
+    <div class="col-lg-12 col-md-12 " style="margin-top: -40px;">
         <div class="single-post">
 
             <div class="image-wrapper">
