@@ -5,14 +5,23 @@
         <div id="slider">
             @foreach ($posts->skip(3)->take(2) as $post)
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
-                <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
-                    <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
-                    <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
-                        <h5 ><b>{{$post->title}}</b></h5>
-                        <x-category-button  :category="$post->category"/>
-                        <p >Published {{$post->created_at->diffForHumans()}}</p>
-                    </div>
-                </div>
+
+                        <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
+
+                                <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
+
+                                <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+
+                                    <h5 ><b>{{$post->title}}</b></h5>
+                                    <p >Published {{$post->created_at->diffForHumans()}}</p>
+
+                                    <x-category-button  :category="$post->category"/>
+                                </div>
+                            </a>
+
+
+                        </div>
+
                 @endif
             @endforeach
 
@@ -42,13 +51,13 @@
                     <div class="blog-posts">
 
                         @if($posts->count())
-                            <x-featured-post :post="$posts[0]"/>
+{{--                            <x-featured-post :post="$posts[0]"/>--}}
                             @if($posts->count() > 1)
                                 <div class="row">
-                                    @foreach($posts->skip(2) as $post)
+                                    @foreach($posts as $post)
                                         <x-post-card :post="$post"/>
                                     @endforeach
-                                    <x-last-card :post="$posts[1]"/>
+{{--                                    <x-last-card :post="$posts[1]"/>--}}
                                 </div><!-- row -->
                             @endif
 {{--                            <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>  <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}

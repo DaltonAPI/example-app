@@ -73,7 +73,7 @@
                        @include('posts._add-comment-form')
                         <div class="comments-area">
                             <h4 class="title"><b class="light-color">{{   $comments->count()}} Comment</b></h4>
-                            @foreach($comments as $comment)
+                            @foreach($post->comments as $comment)
                                 <x-comments :comment="$comment"></x-comments>
                             @endforeach
                         </div><!-- comments-area -->
