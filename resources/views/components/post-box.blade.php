@@ -10,7 +10,7 @@
 @endif
 
 
-         <div class="mb-5 w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
+         <div  style="background-color: #212121" class="mb-5 w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
                 <form method="POST" action="/createPost" enctype="multipart/form-data">
                     @csrf
                     <!-- Title -->

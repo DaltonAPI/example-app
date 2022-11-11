@@ -6,9 +6,9 @@
         <div class="single-post">
 
             <div class="image-wrapper">
-                <a href="{{$post->body}}" target="_blank">
+                <a href="{{$post->body}}" >
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' )
-                    <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
+                    <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : "" }}" alt="Blog Image">
                 @endif
                 @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp' or $post->image_extension === 'mov' )
                     <video style=" border-radius: 15px" class="img-fluid w-100" controls autoplay muted playsinline loop poster="http://placehold.it/350x350">
@@ -17,7 +17,7 @@
                 @endif
                 </a>
             </div>
-            <div class="flex items-center mt-2">
+            <div class="flex items- m  mt-2">
                 <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
                 <div class="text-sm">
                     <p class="text-gray-900 leading-none " style="font-weight: bold"><a  href="/?author={{$post->author->username}}">{{$post->author->name}}</a></p>

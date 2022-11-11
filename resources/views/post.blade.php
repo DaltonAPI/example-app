@@ -23,6 +23,15 @@
 
     <link href="../02-Single-post/css/responsive.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: #212121;
+
+        }
+        h1,h6,p{
+            color: lightgray !important;
+        }
+    </style>
 </head>
 <body>
 
