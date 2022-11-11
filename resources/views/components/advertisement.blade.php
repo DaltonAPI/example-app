@@ -6,3 +6,15 @@
         <h6 class="btn btn-2 discover-btn">DISCOVER</h6>
     </a>
 </div><!-- sidebar-section advertisement-area -->
+{{--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3201106649415125"--}}
+{{--        crossorigin="anonymous"></script>--}}
+{{--<!-- home -->--}}
+{{--<ins class="adsbygoogle"--}}
+{{--     style="display:block"--}}
+{{--     data-ad-client="ca-pub-3201106649415125"--}}
+{{--     data-ad-slot="2085797852"--}}
+{{--     data-ad-format="auto"--}}
+{{--     data-full-width-responsive="true"></ins>--}}
+{{--<script>--}}
+{{--    (adsbygoogle = window.adsbygoogle || []).push({});--}}
+{{--</script>--}}
