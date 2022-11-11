@@ -63,7 +63,7 @@ class PostController extends Controller
             'title' => $request->title,
             'slug' => $request->slug,
             'user_id' => Auth::user()->id,
-//            'excerpt' => $request->excerpt,
+
             'category_id' => $request->category_id,
             'url' => $url,
             'filename' => $filename,

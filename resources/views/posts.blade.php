@@ -3,7 +3,7 @@
 {{--        <x-post-slider :posts="$posts"></x-post-slider>--}}
     <div class="main-slider">
         <div id="slider">
-            @foreach ($posts->skip(3)->take(2) as $post)
+            @foreach ($posts->take(3) as $post)
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
 
                         <div class="ls-slide" data-ls="bgsize:cover; bgposition:50% 50%; duration:4000; transition2d:104; kenburnsscale:1.00;">
@@ -54,7 +54,7 @@
 {{--                            <x-featured-post :post="$posts[0]"/>--}}
                             @if($posts->count() > 1)
                                 <div class="row">
-                                    @foreach($posts as $post)
+                                    @foreach($posts->skip(3) as $post)
                                         <x-post-card :post="$post"/>
                                     @endforeach
 {{--                                    <x-last-card :post="$posts[1]"/>--}}
@@ -67,13 +67,14 @@
                     </div><!-- blog-posts -->
                        {{ $posts->links() }}
                 </div><!-- col-lg-4 -->
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-12 ">
                     <div class="sidebar-area">
                         <x-profile-card/>
+                        <x-newsletter/>
                         <div class="sidebar-section src-area">
                             <x-search/>
                         </div><!-- sidebar-section src-area -->
-                        <x-newsletter/>
+
                         <div class="sidebar-section category-area">
                             <div class="sidebar-section tags-area">
                                 <h4 class="title"><b class="light-color">Categories</b></h4>
@@ -94,12 +95,24 @@
 
                         <div class="sidebar-section latest-post-area">
                             <h4 class="title"><b class="light-color">Latest Posts</b></h4>
-                            @foreach($posts->skip(5)->take(5) as $post  )
+                            @foreach($posts->take(5) as $post  )
                                 <x-latest :post="$post"/>
                             @endforeach
                         </div><!-- sidebar-section latest-post-area -->
 
                        <x-advertisement/>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3201106649415125"
+                                crossorigin="anonymous"></script>
+                        <!-- home -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-3201106649415125"
+                             data-ad-slot="2085797852"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         <section class="footer-instagram-area">
 
                             <div class="container">
