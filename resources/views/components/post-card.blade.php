@@ -6,6 +6,7 @@
         <div class="single-post">
 
             <div class="image-wrapper">
+                <a href="{{$post->body}}" target="_blank">
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' )
                     <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
                 @endif
@@ -14,6 +15,7 @@
                         <source src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" type="video/mp4">
                     </video>
                 @endif
+                </a>
             </div>
             <div class="flex items-center mt-2">
                 <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
