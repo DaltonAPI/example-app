@@ -1,8 +1,8 @@
 @props(['post'])
 
 
-    <div style="margin-top: -26px;">
-    <div class="col-lg-12 col-md-12 footer-instagram-area" >
+
+    <div class="col-lg-12 col-md-12 " style="margin-top: -26px;">
         <div class="single-post">
 
             <div class="image-wrapper">
@@ -38,4 +38,4 @@
         </div><!-- single-post -->
     </div><!-- col-sm-6 -->
 
-    </div>
+
