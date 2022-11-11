@@ -17,9 +17,9 @@
                 @endif
                 </a>
             </div>
-            <div class="flex items- m  mt-2">
+            <div class="flex items-center" >
                 <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
-                <div class="text-sm">
+                <div class="text-sm mr-5" style="margin-left: -17px">
                     <p class="text-gray-900 leading-none " style="font-weight: bold"><a  href="/?author={{$post->author->username}}">{{$post->author->name}}</a></p>
                     <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
                 </div>

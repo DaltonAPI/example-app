@@ -59,8 +59,8 @@
                         </div>
                         <h6 class="title"><a href="#"><b class="light-color">{{$post->title}}</b></a></h6>
                         <div class="flex items-center mb-2">
-                            <img class="w-10 h-10 rounded-full mr-4" src="https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png" alt="Avatar of Writer">
-                            <div class="text-sm">
+                            <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
+                            <div class="text-sm" style="margin-left: -17px">
                                 <p class="text-gray-900 leading-none " style="font-weight: bold"><a href="/?author={{$post->author->username}} ">{{$post->author->name}}</a></p>
                                 <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
                             </div>
@@ -118,12 +118,12 @@
                         </div><!-- sidebar-section tags-area -->
                     </div><!-- sidebar-section category-area -->
 
-{{--                    <div class="sidebar-section latest-post-area">--}}
-{{--                        <h4 class="title"><b class="light-color">Latest Posts</b></h4>--}}
-{{--                        @foreach($posts->skip(5)->take(5) as $post  )--}}
-{{--                            <x-latest :post="$post"/>--}}
-{{--                        @endforeach--}}
-{{--                    </div><!-- sidebar-section latest-post-area -->--}}
+                    <div class="sidebar-section latest-post-area">
+                        <h4 class="title"><b class="light-color">Latest Posts</b></h4>
+                        @foreach($posts as $post  )
+                            <x-latest :post="$post"/>
+                        @endforeach
+                    </div><!-- sidebar-section latest-post-area -->
 
                     <x-advertisement/>
 
