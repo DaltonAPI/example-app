@@ -17,6 +17,7 @@
                 @endif
                 </a>
             </div>
+            <h6 style="color: gray !important;" class="mb-2" ><a href="/posts/{{$post->id}}"><b>{{$post->title}}</b></a></h6>
             <div class="flex items-center" >
                 <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
                 <div class="text-sm mr-5" style="margin-left: -17px">
@@ -24,9 +25,9 @@
                     <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
                 </div>
             </div>
-            <h6 style="color: gray !important;" class="mt-2" ><a href="/posts/{{$post->id}}"><b>{{$post->title}}</b></a></h6>
 
-            <div class="icons" style="margin-top: 6px">
+
+            <div class="icons" style="margin-top: 8px">
                 <x-category-button  :category="$post->category"/>
                 <ul class="right-area social-icons">
                     <x-actions :post="$post"></x-actions>

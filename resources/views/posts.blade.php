@@ -65,7 +65,9 @@
                             <p>No post yet available. Please check back later</p>
                         @endif
                     </div><!-- blog-posts -->
-                       {{ $posts->links() }}
+                     <div class="mb-2">
+                         {{ $posts->links() }}
+                     </div>
                 </div><!-- col-lg-4 -->
                 <div class="col-lg-4 col-md-12 ">
                     <div class="sidebar-area">

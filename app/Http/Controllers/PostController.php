@@ -17,7 +17,7 @@ class PostController extends Controller
 
         return view('posts', [
 
-            'posts' =>  Post::latest()->filter(request(['search','category', 'author']))->paginate(5),
+            'posts' =>  Post::latest()->filter(request(['search','category', 'author']))->paginate(20),
             'categories' => Category::all(),
             'users' => User::all()
 
