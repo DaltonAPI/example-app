@@ -10,7 +10,7 @@
 
                                 <img  class="ls-bg" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
 
-                                <div class="slider-content ls-l" style="top:60%; left:30%;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
+                                <div class="slider-content ls-l" style="top:60%; left:40%;font-size: 10px !important;" data-ls="offsetyin:100%; offsetxout:-50%; durationin:800; delayin:100; durationout:400; parallaxlevel:0;">
 
                                     <h5 ><b>{{$post->title}}</b></h5>
                                     <p >Published {{$post->created_at->diffForHumans()}}</p>
