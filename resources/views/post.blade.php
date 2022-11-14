@@ -47,7 +47,7 @@
                     <div class="single-post">
 
                         <div class="image-wrapper">
-                            @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' )
+                            @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' or $post->image_extension === 'webp')
                                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">
                             @endif
                             @if ($post->image_extension === 'mp4' or $post->image_extension === 'mp3'  or $post->image_extension === 'mov')
