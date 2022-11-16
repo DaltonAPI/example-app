@@ -71,8 +71,6 @@
                             </div>
                            <x-actions :post="$post"></x-actions>
                         </div>
-
-
                         <p style="color: #007aff" class="desc"><a href="{{ $post->body }}">Source: {{ $post->body }}</a></p>
 
                     </div><!-- single-post -->
@@ -81,7 +79,7 @@
                     <div class="leave-comment-area">
                        @include('posts._add-comment-form')
                         <div class="comments-area">
-                            <h4 class="title"><b class="light-color">{{   $comments->count()}} Comment</b></h4>
+                            <h4 class="title"><b class="light-color">{{   $post->comments->count()}} Comment</b></h4>
                             @foreach($post->comments as $comment)
                                 <x-comments :comment="$comment"></x-comments>
                             @endforeach
@@ -120,7 +118,7 @@
 
                     <div class="sidebar-section latest-post-area">
                         <h4 class="title"><b class="light-color">Latest Posts</b></h4>
-                        @foreach($posts as $post  )
+                        @foreach($posts->take(5) as $post  )
                             <x-latest :post="$post"/>
                         @endforeach
                     </div><!-- sidebar-section latest-post-area -->

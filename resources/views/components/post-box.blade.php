@@ -16,7 +16,7 @@
                     <!-- Title -->
                     <x-forms.input  name="title" id="title" placeholder="What's happening" style="margin-bottom: 15px"/>
 
-                    <x-forms.textArea name="body" placeholder="Choose a valid url " style="margin-bottom: 15px"/>
+                    <x-forms.textArea name="body" placeholder="Choose a valid url for your news" style="margin-bottom: 15px"/>
                     <x-forms.upload name="image_url" />
                     <select class="form-select mt-3" aria-label="Default select example" name="category_id" style="margin-bottom: 15px">
                         @foreach($categories as $category  )

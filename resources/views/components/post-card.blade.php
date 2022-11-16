@@ -17,7 +17,7 @@
                     @endif
                 </a>
             </div>
-            <h6 style="color: gray !important;" class="mb-2" ><a href="/posts/{{$post->id}}"><b>{{$post->title}}</b></a></h6>
+            <h4 class="mb-2" ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
             <div class="flex items-center" >
                 <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
                 <div class="text-sm mr-5" style="margin-left: -17px">
