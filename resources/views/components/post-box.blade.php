@@ -26,7 +26,7 @@
                         @endforeach
                     </select>
 
-                    <div class="flex items-center justify-start mt-4 gap-x-2">
+                    <div class="flex items-center justify-start mt-2 gap-x-2">
                         <x-submit>
                             Post
                         </x-submit>

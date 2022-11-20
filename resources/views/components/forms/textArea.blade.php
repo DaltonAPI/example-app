@@ -1,14 +1,23 @@
 @props(['name'])
 
 
-    <x-forms.label name="{{ $name }}" />
+<div>
 
-    <input
-        class="border border-gray-200 p-2 w-full rounded"
-        name="{{ $name }}"
-        id="{{ $name }}"
-        required
-        {{ $attributes }}
-   />
+    <div class="input-group mb-3">
 
+        <input type="text"
+               class="form-control"
 
+               aria-label="Amount (to the nearest dollar)"
+               name="{{ $name }}"
+               id="{{ $name }}"
+
+               required
+            {{ $attributes }}
+            {{ $attributes(['value' => old($name)]) }}
+
+        >
+
+    </div>
+
+</div>

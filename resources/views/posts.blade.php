@@ -79,7 +79,7 @@
 
                         <div class="sidebar-section category-area">
                             <div class="sidebar-section tags-area">
-                                <h4 class="title"><b class="light-color">Categories</b></h4>
+                                <h4 class="title" ><b class="light-color">Categories</b></h4>
                                 <ul class="tags">
                                     <x-dropdown-item>
                                         <li><a class="btn"  style="border-radius: 5px;" href="/">All Post</a></li>
@@ -104,23 +104,23 @@
 
                        <x-advertisement/>
 
-                        <section class="footer-instagram-area">
+{{--                        <section class="footer-instagram-area">--}}
 
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <h5 class="title"><b class="light-color">User List</b></h5>
-                                    </div><!-- col-lg-4 -->
-                                </div><!-- row -->
-                            </div><!-- container -->
+{{--                            <div class="container">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="col-sm-12">--}}
+{{--                                        <h5 class="title"><b class="light-color">User List</b></h5>--}}
+{{--                                    </div><!-- col-lg-4 -->--}}
+{{--                                </div><!-- row -->--}}
+{{--                            </div><!-- container -->--}}
 
-                            <ul class="instagram">
-                                @foreach($users as $user)
-                                    <li><a href="#"><img  class="w-10 h-10 rounded-xl" src="{{ $user->avatar ? asset($user->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Instagram Image"></a></li>
+{{--                            <ul class="instagram">--}}
+{{--                                @foreach($users as $user)--}}
+{{--                                    <li><a href="#"><img  class="w-10 h-10 rounded-xl" src="{{ $user->avatar ? asset($user->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Instagram Image"></a></li>--}}
 
-                                @endforeach
-                            </ul>
-                        </section><!-- section -->
+{{--                                @endforeach--}}
+{{--                            </ul>--}}
+{{--                        </section><!-- section -->--}}
 
 
 

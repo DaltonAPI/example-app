@@ -2,15 +2,22 @@
 
 
 <div>
-    <x-forms.label name="{{$name}}" />
 
-    <input class="border border-gray-200 p-2 w-full rounded"
-           name="{{ $name }}"
-           id="{{ $name }}"
+    <div class="input-group mb-3">
 
-           required
-        {{ $attributes }}
-        {{ $attributes(['value' => old($name)]) }}
-    >
+        <input type="text"
+               class="form-control"
+
+               aria-label="Amount (to the nearest dollar)"
+               name="{{ $name }}"
+               id="{{ $name }}"
+
+               required
+            {{ $attributes }}
+            {{ $attributes(['value' => old($name)]) }}
+
+        >
+
+    </div>
 
 </div>

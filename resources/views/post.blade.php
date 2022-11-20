@@ -23,6 +23,7 @@
 
     <link href="../02-Single-post/css/responsive.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../test.css" rel="stylesheet">
     <style>
         body{
             background-color: #212121;
@@ -57,12 +58,14 @@
                             @endif
 
                         </div>
-                        <h6 class="title"><a href="#"><b class="light-color">{{$post->title}}</b></a></h6>
-                        <div class="flex items-center mb-2">
-                            <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
-                            <div class="text-sm" style="margin-left: -17px">
-                                <p class="text-gray-900 leading-none " style="font-weight: bold"><a href="/?author={{$post->author->username}} ">{{$post->author->name}}</a></p>
-                                <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
+                        <h4 class="mb-2 mt-2" ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
+                        <div class="content">
+                            <div class="author">
+                                <img class="author__avatar" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="George Clooney">
+                                <div class="author__details">
+                                    <div>Posted by <br/><a  href="/?author={{$post->author->username}}" rel="author">{{$post->author->name}}</a></div>
+                                    <time title="29 July 2020">{{$post->created_at->diffForHumans()}}</time>
+                                </div>
                             </div>
                         </div>
                         <div class="icons">
