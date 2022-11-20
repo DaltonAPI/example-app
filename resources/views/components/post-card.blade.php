@@ -18,7 +18,7 @@
                 </a>
             </div>
             <h4 class="mb-2" ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
-            <!--   copy this section   -->
+
 
             <div class="content">
                 <div class="author">
