@@ -33,7 +33,7 @@
             background-color: #212121;
 
         }
-        h1,h6,p{
+        h1,h6,p,.light-color{
             color: lightgray !important;
         }
     </style>
