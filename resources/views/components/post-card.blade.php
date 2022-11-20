@@ -48,6 +48,6 @@
 
 
         </div><!-- single-post -->
-    </div><!-- col-sm-6 -->
+    </div>
 
 
