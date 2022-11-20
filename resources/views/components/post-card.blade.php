@@ -18,24 +18,13 @@
                 </a>
             </div>
             <h4 class="mb-2" ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
-
-
-            <div class="content">
-                <div class="author">
-                    <img class="author__avatar" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="George Clooney">
-                    <div class="author__details">
-                        <div><br/><a  href="/?author={{$post->author->username}}" rel="author">{{$post->author->name}}</a></div>
-                        <time title="29 July 2020">{{$post->created_at->diffForHumans()}}</time>
-                    </div>
+            <div class="flex items-center" >
+                <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
+                <div class="text-sm mr-5" style="margin-left: -17px">
+                    <p class="text-gray-900 leading-none " style="font-weight: bold"><a  href="/?author={{$post->author->username}}">{{$post->author->name}}</a></p>
+                    <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
                 </div>
             </div>
-{{--            <div class="flex items-center" >--}}
-{{--                <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">--}}
-{{--                <div class="text-sm mr-5" style="margin-left: -17px">--}}
-{{--                    <p class="text-gray-900 leading-none " style="font-weight: bold"><a  href="/?author={{$post->author->username}}">{{$post->author->name}}</a></p>--}}
-{{--                    <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
             <div class="icons" style="margin-top: 8px">
                 <x-category-button  :category="$post->category"/>
                 <ul class="right-area social-icons">
@@ -48,6 +37,6 @@
 
 
         </div><!-- single-post -->
-    </div>
+    </div><!-- col-sm-6 -->
 
 
