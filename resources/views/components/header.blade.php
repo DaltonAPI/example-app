@@ -8,7 +8,7 @@
         </ul><!-- left-area -->
         <div class="right-area">
             <div class="src-area">
-                <form action="post">
+                <form method="GET" action="/">
                     @if (request('category'))
                         <input type="hidden" name="category" value="{{ request('category') }}">
                     @endif
