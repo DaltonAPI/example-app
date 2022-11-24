@@ -8,13 +8,7 @@
         </ul><!-- left-area -->
         <div class="right-area">
             <div class="src-area">
-                <form method="GET" action="/">
-                    @if (request('category'))
-                        <input type="hidden" name="category" value="{{ request('category') }}">
-                    @endif
-                    <input class="src-input" type="text" placeholder="Search" value = "{{ request('search') }}">
-                    <button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
-                </form>
+               <x-search></x-search>
             </div><!-- src-area -->
             <ul class="social-icons">
                 <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
