@@ -29,10 +29,10 @@
 
     <link href="../01-homepage/css/responsive.css" rel="stylesheet">
     <style>
-        body{
-            background-color: #212121;
+        /*body{*/
+        /*    background-color: #212121;*/
 
-        }
+        /*}*/
         h1,h6,p{
             color: lightgray !important;
         }
