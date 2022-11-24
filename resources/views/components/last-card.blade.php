@@ -9,7 +9,7 @@
                 <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
             </div>
         </div>
-        <h4  ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
+        <h4  ><a class="me" href="{{$post->body}}"><b  >{{$post->title}}</b></a></h4>
         <div class="image-wrapper">
             @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' or $post->image_extension === 'jpeg' )
                 <img  class="rounded-xl" src="{{ $post->url ? asset($post->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Blog Image">

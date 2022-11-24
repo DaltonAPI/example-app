@@ -10,7 +10,7 @@
                 <p class="text-gray-600">Published {{$post->created_at->diffForHumans()}}</p>
             </div>
         </div>
-        <h4  ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
+        <h4  ><a class="me" href="{{$post->body}}"><b  >{{$post->title}}</b></a></h4>
 
         <div class="image-wrapper">
             <a href="{{$post->body}}" target="_blank">
