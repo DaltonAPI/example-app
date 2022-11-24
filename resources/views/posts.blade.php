@@ -1,7 +1,7 @@
 <x-layout>
 
 {{--        <x-post-slider :posts="$posts"></x-post-slider>--}}
-    <div class="main-slider">
+    <div class="main-slider" style="background-color: #212121 !important;">
         <div id="slider">
             @foreach ($posts->take(3) as $post)
                 @if ($post->image_extension === 'png' or $post->image_extension === 'jpg' or $post->image_extension === 'gif' )
@@ -51,13 +51,13 @@
                     <div class="blog-posts">
 
                         @if($posts->count())
-                            <x-featured-post :post="$posts[3]"/>
+  {{--                            <x-featured-post :post="$posts[3]"/>--}}
                             @if($posts->count() > 1)
                                 <div class="row">
                                     @foreach($posts->skip(5) as $post)
                                         <x-post-card :post="$post"/>
                                     @endforeach
-                                    <x-last-card :post="$posts[4]"/>
+ {{--                                    <x-last-card :post="$posts[4]"/>--}}
                                 </div><!-- row -->
                             @endif
 {{--                            <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>  <a class="btn load-more-btn" target="_blank" href="#">LOAD OLDER POSTS</a>--}}
