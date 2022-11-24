@@ -75,6 +75,7 @@
                            <x-actions :post="$post"></x-actions>
                         </div>
                         <p style="color: #007aff" class="desc"><a href="{{ $post->body }}">Source: {{ $post->body }}</a></p>
+                        <p >{{ $post->description }}</a></p>
 
                     </div><!-- single-post -->
 

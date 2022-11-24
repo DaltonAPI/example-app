@@ -20,7 +20,6 @@ return new class extends Migration
 //            $table->string('slug')->unique();
             $table->string('title');
             $table->string('image_url')->nullable();
-//            $table->text('excerpt');
             $table->text('body');
             $table->text('url');
             $table->text('filename');
