@@ -16,7 +16,7 @@
         </a>
     </div>
     <div class="post-info">
-        <h6 > <a href="#"><b class="light-color" style="color: white">{{$post->title}}</b></a></h6>
+        <h6 > <a href="#"><b class="light-color" >{{$post->title}}</b></a></h6>
 
     </div>
 </div>

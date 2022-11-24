@@ -24,15 +24,7 @@
     <link href="../02-Single-post/css/responsive.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="../test.css" rel="stylesheet">
-    <style>
-        body{
-            background-color: #212121;
 
-        }
-        h1,h6,p{
-            color: lightgray !important;
-        }
-    </style>
 </head>
 <body>
 
@@ -58,13 +50,13 @@
                             @endif
 
                         </div>
-                        <h4 class="mb-2 mt-2" ><a class="me" href="{{$post->body}}"><b  style="color: white">{{$post->title}}</b></a></h4>
+                        <h4 class="mb-2 mt-2" ><a class="me" href="{{$post->body}}"><b  >{{$post->title}}</b></a></h4>
                         <div class="content">
                             <div class="author">
                                 <img class="author__avatar" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="George Clooney">
                                 <div class="author__details">
-                                    <div>Posted by <br/><a  href="/?author={{$post->author->username}}" rel="author">{{$post->author->name}}</a></div>
-                                    <time title="29 July 2020">{{$post->created_at->diffForHumans()}}</time>
+                                    <div><br/><a  href="/?author={{$post->author->username}}" rel="author">{{$post->author->name}}</a></div>
+                                    <time title="29 July 2020" style="font-size: 0.7rem">{{$post->created_at->diffForHumans()}}</time>
                                 </div>
                             </div>
                         </div>

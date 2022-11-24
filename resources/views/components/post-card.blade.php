@@ -2,7 +2,7 @@
 
 
 
-    <div class="col-lg-6 col-md-6 " style="margin-top: -40px;">
+    <div class="col-lg-12 col-md-12 " style="margin-top: -40px;">
         <div class="single-post">
             <div class="flex items-center" >
                 <img class="w-10 h-10 rounded-full mr-4" src="{{ $post->author->avatar ? asset($post->author->url) : asset('../images/blog-7-500x400.jpg' ) }}" alt="Avatar of Writer">
