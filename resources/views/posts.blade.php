@@ -39,16 +39,16 @@
             <div class="row">
 
                 <div class="col-lg-8 col-md-12">
-                    <h1>Local News</h1>
+                    <h3>What to Post</h3>
                     <p class="" style="margin-bottom: 45px">
-                        Chattabox is a platform where we get news from the people instead of  the media. This application was created for learning but feel free  to post your content. Please avoid posting graphic content, large files(over 20mb ) or misinformation of any kind.
+                        Chattabox is a platform where you can create your blog. In order to create blog, you will have to register an account. This application was created for learning but feel free  to post your content. Please avoid posting graphic content, large files(over 20mb ) or misinformation of any kind.
 
 
                      </p>
                    @auth
                         <x-post-box  :categories="$categories"/>
                     @endauth
-                    <div class="blog-posts">
+                    <div class="blog-posts mt-10">
 
                         @if($posts->count())
 {{--                              <x-featured-post :post="$posts[3]"/>--}}

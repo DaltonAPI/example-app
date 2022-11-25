@@ -16,7 +16,7 @@
                     <!-- Title -->
                     <x-forms.input  name="title" id="title" placeholder="What's happening" style="margin-bottom: 15px"/>
 
-                    <x-forms.textArea name="body" placeholder="Choose a valid url for your news" style="margin-bottom: 15px"/>
+                    <x-forms.textArea name="body" placeholder="Choose a valid url for your blog" style="margin-bottom: 15px"/>
                     <x-forms.body name="description" placeholder="Body for your blog(optional)" style="margin-bottom: 15px"/>
 
 
